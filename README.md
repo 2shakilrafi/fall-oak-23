@@ -18,8 +18,8 @@ The processed tract-level tables are included as CSV files (`main-data.csv`, `ma
 
 | File | Purpose |
 |---|---|
-| `OAK-Fall-2023.ipynb`, `OAK-Fall-2023-2.ipynb` | Data preparation, pickup choropleth maps, and the merged tract-level table |
-| `ARNA_SHAKIL_FINAL_CODE.ipynb` | Aggregates the raw trip data by pickup tract; includes the SOM analysis |
+| `ARNA_SHAKIL_FINAL_CODE.ipynb` | Reduces the raw trip file (`tdata.csv`) to pickup tract, trip miles, and trip seconds (`geoid-miles-seconds.csv`) |
+| `OAK-Fall-2023.ipynb`, `OAK-Fall-2023-2.ipynb` | Pickup choropleth maps, the merged tract-level table, and the SOM analysis |
 | `mapping.ipynb` | Maps the cluster assignments back onto Chicago |
 | `oak-presentation.tex`, `oak-presentation.pdf` | Slides (LaTeX/Beamer) |
 | `OralsPresentation.tex`, `OAK_FALL_23_themed.pdf` | Earlier themed version of the talk |
@@ -27,7 +27,7 @@ The processed tract-level tables are included as CSV files (`main-data.csv`, `ma
 
 ## Running it
 
-Use Python with `pandas`, `geopandas`, `folium`, `numpy`, `scikit-learn`, `matplotlib`, and `pyarrow`. The notebooks expect the CSV files to be in the working directory. `ARNA_SHAKIL_FINAL_CODE.ipynb` starts from the full raw trip file (`tdata.csv`), which is large and not included; the later notebooks start from the processed tables and run without it.
+Use Python with `pandas`, `geopandas`, `folium`, `numpy`, `scikit-learn`, `matplotlib`, and `pyarrow`. The notebooks expect the CSV files to be in the working directory. `ARNA_SHAKIL_FINAL_CODE.ipynb` starts from the full raw trip file (`tdata.csv`), which is large and not included. `OAK-Fall-2023.ipynb` reads its output, `geoid-miles-seconds.csv`, which is also not included, so rerunning the full analysis requires the raw Chicago trip data.
 
 ## Authors
 
